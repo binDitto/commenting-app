@@ -2,6 +2,74 @@
 @import "bootstrap";
 
 body {
-  background-color: black;
+  background-color: lightgray;
   color: white;
+}
+
+
+ul.custo {
+  margin-top: 15px;
+  margin-bottom: 0px;
+  text-decoration: none;
+  background-color: rgba(0,0,0, 0.1);
+  padding: 40px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  list-style-type: none;
+  li.cust {
+    list-style-type: none;
+    display: block;
+    background-color: rgba(255,255,255, 0.2);
+    border-left: 2px solid red;
+    margin: 5px 0px;
+    margin-left: none;
+    padding: 5px 20px;
+    text-align: left;
+    height: 50px;
+  }
+}
+
+.form-group .user {
+  width: 120px;
+  height: 50px;
+  margin: 0px;
+  border-radius: 0px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.form-group .des {
+  margin: 0px;
+  margin-left: -5px;
+  width: 330px;
+  height: 50px;
+  border-radius: 0px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.form-group .newbtn {
+  height: 50px;
+  width: 100px;
+  border-radius: 8px;
+}
+.showhide {
+  color: white;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: rgba(0,0,0, 0.1);
+  margin-top: -10px;
+  border: 1px solid rgba(0,0,0, 0.1);
+  margin: 0px;
+  width: 100%;
+  display: hidden;
+}
+.showhide:hover {
+  background-color: rbga(0,0,0, 0.5);
+}
+.showhide:focus {
+  outline: 0;
+}
+.showhide:active {
+  outline: none;
 }

@@ -2,8 +2,13 @@ class CommentsController < ApplicationController
   before_action :comment_id, only: [ :edit, :update, :show, :destroy ]
 
   def index
-    @comments = Comment.all
+    @comments = Comment.all.order(:created_at).reverse_order
     @comment = Comment.new()
+
+    if @comments.length > 9
+      @comments.last.delete
+
+    end
   end
 
   def new
@@ -14,10 +19,10 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
 
     if @comment.save
-      flash[:success] = "Your comment went through @ #{comment.user}"
-      redirect_to 'index'
+      flash[:success] = "Your comment went through @ #{@comment.user}"
+      redirect_to comments_path
     else
-      render 'index'
+      flash[:danger] = "It didn't work!"
     end
   end
 
