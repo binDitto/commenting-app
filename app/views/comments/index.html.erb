@@ -43,7 +43,7 @@
             </small>
             <div class="rightbox">
               <span class="verttext"><i class="fa fa-ellipsis-v"></i> </span>
-              <%= link_to "Delete", comment_path(comment), method: :delete, class: "label label-default del" %>
+              <%= link_to "Delete", comment_path(comment), method: :delete, data: {confirm: "Are you sure?"}, class: "label label-default del" %>
             </div>
           </li>
 
