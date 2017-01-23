@@ -7,7 +7,14 @@ body {
   color: white;
 }
 
-
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
 ul.custo {
   margin-top: 15px;
   margin-bottom: 0px;
