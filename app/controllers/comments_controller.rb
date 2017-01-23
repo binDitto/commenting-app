@@ -4,10 +4,8 @@ class CommentsController < ApplicationController
   def index
     @comments = Comment.all.order(:created_at).reverse_order
     @comment = Comment.new()
-
     if @comments.length > 9
       @comments.last.delete
-
     end
   end
 
@@ -22,6 +20,7 @@ class CommentsController < ApplicationController
       flash[:success] = "Your comment went through @ #{@comment.user}"
       redirect_to comments_path
     else
+      render 'index'
       flash[:danger] = "It didn't work!"
     end
   end
@@ -41,7 +40,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment.destroy
     flash[:danger] = "Comment Removed!"
-    redirect_to comments_path 
+    redirect_to comments_path
   end
 
   private

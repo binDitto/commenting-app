@@ -76,8 +76,9 @@ ul.custo {
   outline: none;
 }
 .rightbox {
-  background-color: rgba(0,10,10,.2);
+
   position: absolute;
+  border-left: 1px solid rgba(255,255,255, 0.5);
   right: 0px;
   top: 0px;
   height: 100%;
@@ -109,5 +110,6 @@ ul.custo {
 }
 .rightbox:hover {
   background-color: rgba(0,10,10,.1);
+  border-left:1px solid rgba(0,10,10,.1);
 
 }
