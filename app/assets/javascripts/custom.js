@@ -4,6 +4,8 @@ $(document).ready(function(){
   if ($('li.cust').length > 4) {
       $('li.cust:gt(4)').hide("slow");
       $('button.showhide').show("slow");
+  } else {
+    $('button.showhide').hide("slow");
   }
 
       $('button.showhide').on('click', function(e){
