@@ -18,7 +18,7 @@ $(document).ready(function(){
     $('.rightbox .del').hide();
   $('.rightbox').on('click', function(e){
     e.preventDefault();
-    $('.rightbox .del').toggle();
+    $('.del', this).toggle();
   });
 
       $('button.showhide').on('click', function(e){
