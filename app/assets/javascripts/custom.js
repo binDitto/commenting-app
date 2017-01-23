@@ -18,8 +18,12 @@ $(document).ready(function(){
     $('.rightbox .del').hide();
   $('.rightbox').on('click', function(e){
     e.preventDefault();
+
+    $('.rightbox .del').not($(this).parent().find('.del')).hide();
     $('.del', this).toggle();
   });
+
+
 
       $('button.showhide').on('click', function(e){
         e.preventDefault();
